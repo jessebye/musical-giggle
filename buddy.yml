@@ -1,0 +1,5 @@
+- pipeline: "Build"
+  trigger_mode: "ON_EVERY_PUSH"
+  ref_name: "refs/heads/*"
+  ref_type: "WILDCARD"
+  trigger_condition: "ALWAYS"
