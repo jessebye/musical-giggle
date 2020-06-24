@@ -5,21 +5,11 @@
   fetch_all_refs: true
   trigger_condition: "ALWAYS"
   actions:
-  - action: "Execute: go build"
-    type: "BUILD"
-    working_directory: "/src/github.com/jessebye/musical-giggle"
-    docker_image_name: "library/golang"
-    docker_image_tag: "1.14"
-    execute_commands:
-    - "export GOPATH=/"
-    - "export GO15VENDOREXPERIMENT=1"
-    - "go test"
-    - "go build"
-    volume_mappings:
-    - "/:/src/github.com/jessebye/musical-giggle"
-    trigger_condition: "ALWAYS"
-    shell: "BASH"
   - action: "Build Docker image"
     type: "DOCKERFILE"
+    login: "foobar"
+    password: "secure!yOGhjqgFOYzgeZ4CjAA2Ww==.Vwk7F15S4wALxADPyk56Pw=="
+    docker_image_tag: "latest"
     dockerfile_path: "Dockerfile"
+    repository: "riskalyze/hello"
     trigger_condition: "ALWAYS"
