@@ -12,4 +12,5 @@
     docker_image_tag: "latest"
     dockerfile_path: "Dockerfile"
     repository: "riskalyze/hello"
+    buildkit: true
     trigger_condition: "ALWAYS"
