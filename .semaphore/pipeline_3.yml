@@ -1,12 +1,12 @@
 version: v1.0
-name: Deploy
+name: Prod Deploy
 blocks:
-  - name: 'Block #1'
+  - name: Deploy to Prod Kubernetes Cluster
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Update and commit manifest
           commands:
-            - echo "job 1"
+            - echo "updated a manifest"
 agent:
   machine:
     type: e1-standard-2

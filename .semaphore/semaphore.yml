@@ -33,7 +33,3 @@ blocks:
 promotions:
   - name: Deploy to Stage
     pipeline_file: pipeline_2.yml
-  - name: Deploy to Prod
-    pipeline_file: pipeline_3.yml
-    auto_promote:
-      when: branch = 'master' AND result = 'passed'

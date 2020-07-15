@@ -11,3 +11,8 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+promotions:
+  - name: Deploy to Prod
+    pipeline_file: pipeline_3.yml
+    auto_promote:
+      when: branch = 'master' AND result = 'passed'
