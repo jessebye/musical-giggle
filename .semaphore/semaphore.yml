@@ -17,6 +17,7 @@ blocks:
     dependencies: []
     task:
       jobs:
-        - name: 'Job #1'
+        - name: go test
           commands:
+            - checkout
             - go test
