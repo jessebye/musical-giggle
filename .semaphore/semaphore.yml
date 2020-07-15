@@ -1,0 +1,28 @@
+version: v1.0
+name: Docker
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Build
+    task:
+      jobs:
+        - name: docker build
+          commands:
+            - checkout
+            - docker build -t musical-giggle .
+    dependencies: []
+  - name: Test
+    dependencies: []
+    task:
+      jobs:
+        - name: go test
+          commands:
+            - checkout
+            - go test
+promotions:
+  - name: Deploy to Prod
+    pipeline_file: pipeline_2.yml
+    auto_promote:
+      when: branch = 'master' AND result = 'passed'
