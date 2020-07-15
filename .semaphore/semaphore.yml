@@ -12,3 +12,11 @@ blocks:
           commands:
             - checkout
             - docker build -t musical-giggle .
+    dependencies: []
+  - name: Test
+    dependencies: []
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - go test
