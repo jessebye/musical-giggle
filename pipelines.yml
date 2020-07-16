@@ -16,7 +16,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myAppRepo
+            - name: musical-giggle
         execution:
           onExecute:
             - echo $MY_MESSAGE
@@ -24,9 +24,9 @@ pipelines:
             - add_run_variables current_runid=$run_id
             - echo Previous run ID is $prev_runid
             - echo Current run ID is $current_runid
-            - echo $res_myAppRepo_resourcePath
-            - echo $res_myAppRepo_gitProvider_name
-            - echo $res_myAppRepo_commitSha
+            - echo $res_musical-giggle_resourcePath
+            - echo $res_musical-giggle_gitProvider_name
+            - echo $res_musical-giggle_commitSha
  
       - name: step_2
         type: Bash
