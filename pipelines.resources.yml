@@ -1,0 +1,6 @@
+resources:
+  - name: musical-giggle
+    type: GitRepo
+    configuration:
+      gitProvider: github
+      path: jessebye/musical-giggle
