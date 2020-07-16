@@ -1,5 +1,5 @@
 resources:
-  - name: musical-giggle
+  - name: musical_giggle
     type: GitRepo
     configuration:
       gitProvider: github
@@ -16,7 +16,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: musical-giggle
+            - name: musical_giggle
         execution:
           onExecute:
             - echo $MY_MESSAGE
@@ -24,9 +24,9 @@ pipelines:
             - add_run_variables current_runid=$run_id
             - echo Previous run ID is $prev_runid
             - echo Current run ID is $current_runid
-            - echo $res_musical-giggle_resourcePath
-            - echo $res_musical-giggle_gitProvider_name
-            - echo $res_musical-giggle_commitSha
+            - echo $res_musical_giggle_resourcePath
+            - echo $res_musical_giggle_gitProvider_name
+            - echo $res_musical_giggle_commitSha
  
       - name: step_2
         type: Bash
