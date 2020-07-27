@@ -1,0 +1,23 @@
+{
+  "name": "musical-giggle",
+  "version": "0.0.0-development",
+  "description": "CI Test Repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jessebye/musical-giggle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessebye/musical-giggle/issues"
+  },
+  "homepage": "https://github.com/jessebye/musical-giggle#readme",
+  "devDependencies": {
+    "semantic-release": "^17.1.1"
+  }
+}

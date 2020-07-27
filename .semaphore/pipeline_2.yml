@@ -1,0 +1,13 @@
+version: v1.0
+name: Pipeline 2
+blocks:
+  - name: Deploy to Prod Kubernetes Cluster
+    task:
+      jobs:
+        - name: Update and commit manifest
+          commands:
+            - echo "updated the manifest"
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
